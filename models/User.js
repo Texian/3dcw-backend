@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 //--------------------- Email validation
 const validateEmail = function(email) {
@@ -19,7 +20,6 @@ const UserSchema = new mongoose.Schema({
         match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please enter a valid email address']
     },
     password: {type:String, required: true, minlength: 8, maxlength: 30},
-},
-{timestamps: true});
+});
 
 module.exports = mongoose.model('User', UserSchema);
