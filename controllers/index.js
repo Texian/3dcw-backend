@@ -1,4 +1,5 @@
 module.exports = {
     users: require('./usersControllers'),
-    projects: require('./projectsController')
+    projects: require('./projectsController'),
+    posts: require('./postsController'),
 }

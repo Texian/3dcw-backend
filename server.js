@@ -33,7 +33,7 @@ const routes = require('./routes');
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(
+/* app.use(
     session({
         store: new MongoStore({url: process.env.MONGODB_URI}),
         secret: process.env.SESSION_SECRET,
@@ -43,11 +43,8 @@ app.use(
             maxAge: 1000 * 60 * 60 * 24 * 7 * 2
         }
     })
-);
+); */
 
-
-app.use('/', routes.index);
-app.use('/users', routes.users);
 app.use('/api/v1', routes.api);
 app.get('/', (req, res) => {
     res.send(`Server running on port ${PORT}`);

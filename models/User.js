@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
 //--------------------- Email validation
 const validateEmail = function(email) {

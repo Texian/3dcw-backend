@@ -9,7 +9,7 @@ router.get('/users/:id', verifyToken, ctrl.users.show);
 //router.get('/users/profile', verifyToken, ctrl.users.profile);
 router.post('/users', ctrl.users.create);
 router.put('/users/:id', verifyToken, ctrl.users.update);
-//router.delete('/users/:id', verifyToken, ctrl.users.destroy);
+router.delete('/users/:id', verifyToken, ctrl.users.destroy);
 
 //--------------------- Posts
 router.get('/posts', ctrl.posts.index);
