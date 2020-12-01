@@ -15,4 +15,11 @@ router.post('/posts', ctrl.posts.create);
 router.put('/posts/:id', ctrl.posts.update);
 router.delete('/posts/:id', ctrl.posts.destroy);
 
+//--------------------- Projects
+router.get('/projects', ctrl.projects.index);
+router.get('/projects/:id', ctrl.projects.show);
+router.post('/projects', ctrl.projects.create);
+router.put('/projects/:id', ctrl.projects.update);
+router.delete('/projects/:id', ctrl.projects.destroy);
+
 module.exports = router;
